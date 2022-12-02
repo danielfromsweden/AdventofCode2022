@@ -10,7 +10,7 @@ for line in Lines:
     current_points = 0
     hand_op = line[0]
     hand_me = line[2]
-    if hand_me=='X': # rock
+    if hand_me=='X': # rock/loss
         current_points += 1
         if hand_op == 'A': # rock
             current_points += tie
