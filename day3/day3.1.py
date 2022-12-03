@@ -5,10 +5,6 @@ letter_dict = {alphabet[i]: i+1 for i in range(len(alphabet))}
 sum = 0
 
 for line in Lines:
-    line_len = len(line)
-    first_compartment = line[:line_len//2]
-    second_compartment = line[line_len//2:]
-    intersect = list(set(first_compartment).intersection(set(second_compartment)))
-    sum += letter_dict.get(intersect[0])
+    sum += letter_dict.get(list(set(line[:len(line)//2]).intersection(set(line[len(line)//2:])))[0])
 
 print("Sum of intersecting letters:", sum)
